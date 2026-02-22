@@ -1,0 +1,1 @@
+{"version":3,"file":"GoogleSheetsService.d.ts","sourceRoot":"","sources":["../../src/services/GoogleSheetsService.ts"],"names":[],"mappings":"AA0BA,qBAAa,mBAAmB;IACxB,UAAU,CAAC,IAAI,EAAE;QACrB,EAAE,EAAE,MAAM,CAAA;QACV,IAAI,EAAE,MAAM,CAAA;QACZ,KAAK,EAAE,MAAM,CAAA;QACb,KAAK,EAAE,MAAM,CAAA;QACb,IAAI,EAAE,MAAM,CAAA;QACZ,SAAS,EAAE,IAAI,CAAA;KAChB;CAyBF"}

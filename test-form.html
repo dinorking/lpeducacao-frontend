@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste do Formulário do Hero</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input.error {
+            border-color: #ff4444;
+        }
+        .error-message {
+            color: #ff4444;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+        .success-message {
+            color: #28a745;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+        button {
+            background-color: #FF6B35;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #E55A28;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .test-result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            display: none;
+        }
+        .test-result.success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .test-result.error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste do Formulário do Hero</h1>
+    
+    <div class="test-section">
+        <h2>Teste de Validação de Campos</h2>
+        <form id="test-form">
+            <div class="form-group">
+                <label for="test-nome">Nome:</label>
+                <input type="text" id="test-nome" placeholder="Digite seu nome">
+                <div class="error-message" id="error-nome">Nome deve ter pelo menos 2 caracteres</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="test-whatsapp">WhatsApp:</label>
+                <input type="text" id="test-whatsapp" placeholder="(00) 00000-0000">
+                <div class="error-message" id="error-whatsapp">Formato de WhatsApp inválido</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="test-email">E-mail:</label>
+                <input type="email" id="test-email" placeholder="seuemail@exemplo.com">
+                <div class="error-message" id="error-email">E-mail inválido</div>
+            </div>
+            
+            <button type="submit" id="test-submit">Testar Validação</button>
+        </form>
+        
+        <div class="test-result" id="test-result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Teste de Formatação de WhatsApp</h2>
+        <p>Teste digitando apenas números no campo WhatsApp:</p>
+        <input type="text" id="whatsapp-format-test" placeholder="Digite apenas números">
+        <p>Resultado formatado: <span id="whatsapp-formatted-result"></span></p>
+    </div>
+
+    <script>
+        // Funções de validação (copiadas do código React)
+        function validarNome(nome) {
+            return nome.length >= 2;
+        }
+
+        function validarWhatsApp(whatsapp) {
+            const regex = /^\(\d{2}\) \d{5}-\d{4}$/;
+            return regex.test(whatsapp);
+        }
+
+        function validarEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function formatarWhatsApp(value) {
+            let formatted = value.replace(/\D/g, '');
+            if (formatted.length <= 11) {
+                formatted = formatted.replace(/^(\d{2})(\d)/, '($1) $2');
+                formatted = formatted.replace(/(\d)(\d{4})$/, '$1-$2');
+            }
+            return formatted;
+        }
+
+        // Teste de validação
+        document.getElementById('test-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('test-nome').value.trim();
+            const whatsapp = document.getElementById('test-whatsapp').value.trim();
+            const email = document.getElementById('test-email').value.trim();
+            
+            let isValid = true;
+            let messages = [];
+
+            // Validar nome
+            if (!validarNome(nome)) {
+                document.getElementById('error-nome').style.display = 'block';
+                document.getElementById('test-nome').classList.add('error');
+                isValid = false;
+                messages.push('Nome inválido');
+            } else {
+                document.getElementById('error-nome').style.display = 'none';
+                document.getElementById('test-nome').classList.remove('error');
+            }
+
+            // Validar WhatsApp
+            if (!validarWhatsApp(whatsapp)) {
+                document.getElementById('error-whatsapp').style.display = 'block';
+                document.getElementById('test-whatsapp').classList.add('error');
+                isValid = false;
+                messages.push('WhatsApp inválido');
+            } else {
+                document.getElementById('error-whatsapp').style.display = 'none';
+                document.getElementById('test-whatsapp').classList.remove('error');
+            }
+
+            // Validar email
+            if (!validarEmail(email)) {
+                document.getElementById('error-email').style.display = 'block';
+                document.getElementById('test-email').classList.add('error');
+                isValid = false;
+                messages.push('E-mail inválido');
+            } else {
+                document.getElementById('error-email').style.display = 'none';
+                document.getElementById('test-email').classList.remove('error');
+            }
+
+            // Exibir resultado
+            const resultDiv = document.getElementById('test-result');
+            if (isValid) {
+                resultDiv.className = 'test-result success';
+                resultDiv.textContent = '✅ Todas as validações passaram! Formulário válido.';
+                resultDiv.style.display = 'block';
+            } else {
+                resultDiv.className = 'test-result error';
+                resultDiv.textContent = '❌ Erros encontrados: ' + messages.join(', ');
+                resultDiv.style.display = 'block';
+            }
+        });
+
+        // Teste de formatação de WhatsApp
+        document.getElementById('whatsapp-format-test').addEventListener('input', function(e) {
+            const formatted = formatarWhatsApp(e.target.value);
+            document.getElementById('whatsapp-formatted-result').textContent = formatted;
+        });
+
+        // Teste automático com dados válidos
+        setTimeout(() => {
+            document.getElementById('test-nome').value = 'João Silva';
+            document.getElementById('test-whatsapp').value = '(11) 98765-4321';
+            document.getElementById('test-email').value = 'joao@email.com';
+            
+            // Simular submissão
+            const event = new Event('submit');
+            document.getElementById('test-form').dispatchEvent(event);
+        }, 1000);
+    </script>
+</body>
+</html>

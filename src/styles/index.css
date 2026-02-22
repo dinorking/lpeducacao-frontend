@@ -1,0 +1,13 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevenir scroll horizontal indesejado */
+body {
+  overflow-x: hidden;
+}
