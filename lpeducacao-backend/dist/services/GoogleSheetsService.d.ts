@@ -1,4 +1,6 @@
 export declare class GoogleSheetsService {
+    private sheetsClient;
+    private getSheetsClient;
     appendLead(data: {
         id: string;
         name: string;

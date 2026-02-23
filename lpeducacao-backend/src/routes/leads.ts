@@ -50,22 +50,42 @@ export async function leadRoutes(app: FastifyInstance) {
               message: { type: 'string' },
               leadId: { type: 'string' }
             }
+          },
+          500: {
+            type: 'object',
+            properties: {
+              message: { type: 'string' }
+            }
           }
         }
       }
     },
-    async request => {
+    async (request, reply) => {
       const { name, email, phone } = request.body as {
         name: string
         email: string
         phone: string
       }
 
-      return leadService.start({
-        name,
-        email,
-        phone
-      })
+      try {
+        return await leadService.start({
+          name,
+          email,
+          phone
+        })
+      } catch (error) {
+        request.log.error(
+          {
+            err: error,
+            route: '/leads/start'
+          },
+          'Failed to start lead'
+        )
+
+        return reply.status(500).send({
+          message: 'Nao foi possivel enviar seu cadastro. Tente novamente.'
+        })
+      }
     }
   )
 
@@ -100,6 +120,12 @@ export async function leadRoutes(app: FastifyInstance) {
             properties: {
               message: { type: 'string' }
             }
+          },
+          500: {
+            type: 'object',
+            properties: {
+              message: { type: 'string' }
+            }
           }
         }
       }
@@ -118,7 +144,18 @@ export async function leadRoutes(app: FastifyInstance) {
           return reply.status(error.statusCode).send({ message: error.message })
         }
 
-        throw error
+        request.log.error(
+          {
+            err: error,
+            route: '/leads/:id/step',
+            leadId: id
+          },
+          'Failed to advance lead step'
+        )
+
+        return reply.status(500).send({
+          message: 'Nao foi possivel atualizar a etapa do lead.'
+        })
       }
     }
   )

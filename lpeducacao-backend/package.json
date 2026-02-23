@@ -14,13 +14,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@neondatabase/serverless": "^1.0.2",
-    "@prisma/adapter-neon": "^7.4.1",
+    "@fastify/cors": "^11.2.0",
+    "@prisma/adapter-pg": "^7.4.1",
     "@prisma/client": "^7.4.1",
     "dotenv": "^17.3.1",
     "fastify": "^5.7.4",
     "googleapis": "^171.4.0",
     "nodemailer": "^8.0.1",
+    "pg": "^8.18.0",
     "prisma": "^7.4.1"
   },
   "devDependencies": {

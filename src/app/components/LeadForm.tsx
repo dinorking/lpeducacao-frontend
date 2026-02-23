@@ -24,6 +24,7 @@ interface LeadFormProps {
 export function LeadForm({ variant = 'hero' }: LeadFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'error'>('idle')
+  const [submitErrorMessage, setSubmitErrorMessage] = useState('')
   const [formData, setFormData] = useState<LeadFormData>({
     name: '',
     phone: '',
@@ -78,6 +79,7 @@ export function LeadForm({ variant = 'hero' }: LeadFormProps) {
 
     setIsSubmitting(true)
     setSubmitStatus('idle')
+    setSubmitErrorMessage('')
     setFieldErrors({})
 
     const parsed = leadFormSchema.safeParse(formData)
@@ -97,6 +99,11 @@ export function LeadForm({ variant = 'hero' }: LeadFormProps) {
       window.location.assign(REDIRECT_URL)
     } catch (error) {
       console.error('Erro ao enviar lead:', error)
+      if (error instanceof Error && error.message.trim().length > 0) {
+        setSubmitErrorMessage(error.message)
+      } else {
+        setSubmitErrorMessage('Nao foi possivel enviar. Tente novamente.')
+      }
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -185,9 +192,7 @@ export function LeadForm({ variant = 'hero' }: LeadFormProps) {
         {submitStatus === 'error' && (
           <div className="bg-red-50 border border-red-200 rounded-lg p-3 flex items-center gap-2">
             <AlertCircle className="w-5 h-5 text-red-500" />
-            <span className="text-red-700 text-sm">
-              Nao foi possivel enviar. Tente novamente.
-            </span>
+            <span className="text-red-700 text-sm">{submitErrorMessage}</span>
           </div>
         )}
 

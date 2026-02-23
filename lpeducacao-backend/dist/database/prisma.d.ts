@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client';
-import { PrismaNeon } from '@prisma/adapter-neon';
+import { PrismaPg } from '@prisma/adapter-pg';
 export declare const prisma: PrismaClient<{
-    adapter: PrismaNeon;
+    adapter: PrismaPg;
 }, never, import("@prisma/client/runtime/client").DefaultArgs>;
 //# sourceMappingURL=prisma.d.ts.map
