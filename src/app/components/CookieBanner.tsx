@@ -17,6 +17,11 @@ export function CookieBanner() {
     setIsVisible(false);
   };
 
+  const handleReject = () => {
+    localStorage.setItem('cookieAccepted', 'true');
+    setIsVisible(false);
+  };
+
   if (!isVisible) return null;
 
   return (
@@ -38,12 +43,21 @@ export function CookieBanner() {
             </div>
           </div>
           
-          <button
-            onClick={handleAccept}
-            className="w-full sm:w-auto bg-[#0055A5] hover:bg-[#003366] text-white px-6 py-2 rounded-lg font-semibold transition-colors"
-          >
-            Aceitar
-          </button>
+          <div className="w-full sm:w-auto flex gap-2">
+            <button
+              onClick={handleReject}
+              className="w-full sm:w-auto bg-white border border-gray-300 hover:bg-gray-100 text-gray-700 px-6 py-2 rounded-lg font-semibold transition-colors"
+            >
+              Recusar
+            </button>
+
+            <button
+              onClick={handleAccept}
+              className="w-full sm:w-auto bg-[#0055A5] hover:bg-[#003366] text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+            >
+              Aceitar
+            </button>
+          </div>
         </div>
       </div>
     </div>
