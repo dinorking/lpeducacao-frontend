@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
         privacy: fileURLToPath(new URL('./politica-de-privacidade.html', import.meta.url)),
+        terms: fileURLToPath(new URL('./termos-de-uso.html', import.meta.url)),
       },
     },
   },

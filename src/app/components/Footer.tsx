@@ -52,7 +52,7 @@ export function Footer() {
             </div>
             
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
+              <a href="/termos-de-uso" className="hover:text-white transition-colors">Termos de Uso</a>
               <a href="/politica-de-privacidade" className="hover:text-white transition-colors">Política de Privacidade</a>
             </div>
           </div>
