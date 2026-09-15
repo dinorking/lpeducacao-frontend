@@ -1,4 +1,4 @@
-import { Mail, Phone, Instagram } from 'lucide-react';
+import { Phone, Instagram } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -40,12 +40,6 @@ export function Footer() {
                   <p className="text-xs">Segunda a Sábado, 9h às 22h</p>
                 </div>
               </li>
-              <li className="flex items-start gap-2">
-                <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <a href="mailto:rian.consultoreducacional@gmail.com.br" className="hover:text-white transition-colors">
-                  rian.consultoreducacional@gmail.com.br
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -59,7 +53,7 @@ export function Footer() {
             
             <div className="flex flex-wrap justify-center gap-4">
               <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
-              <a href="#" className="hover:text-white transition-colors">Política de Privacidade</a>
+              <a href="/politica-de-privacidade" className="hover:text-white transition-colors">Política de Privacidade</a>
             </div>
           </div>
 

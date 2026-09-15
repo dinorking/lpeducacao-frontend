@@ -1,9 +1,18 @@
 import { defineConfig } from 'vite'
 import path from 'path'
+import { fileURLToPath } from 'node:url'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      input: {
+        main: fileURLToPath(new URL('./index.html', import.meta.url)),
+        privacy: fileURLToPath(new URL('./politica-de-privacidade.html', import.meta.url)),
+      },
+    },
+  },
   plugins: [
     // The React and Tailwind plugins are both required for Make, even if
     // Tailwind is not being actively used – do not remove them

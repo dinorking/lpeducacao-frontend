@@ -1,4 +1,7 @@
 {
   "buildCommand": "node ./node_modules/vite/bin/vite.js build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/politica-de-privacidade", "destination": "/politica-de-privacidade.html" }
+  ]
 }

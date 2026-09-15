@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Política de Privacidade da Consultoria Educa, em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD).">
+  <meta name="robots" content="index,follow">
+  <title>Política de Privacidade | Consultoria Educa</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --text: #172033;
+      --muted: #5c667a;
+      --primary: #183a70;
+      --accent: #1f8a70;
+      --border: #dfe5ef;
+      --focus: #ffbf47;
+      --shadow: 0 18px 48px rgba(23, 32, 51, 0.09);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    a { color: var(--primary); }
+
+    a:hover { color: var(--accent); }
+
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    .topbar {
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .topbar__inner,
+    main {
+      width: min(100% - 32px, 940px);
+      margin-inline: auto;
+    }
+
+    .topbar__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 68px;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--primary);
+      font-weight: 750;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+    }
+
+    .home-link {
+      color: var(--muted);
+      font-size: 0.94rem;
+      text-decoration: none;
+    }
+
+    main { padding: 56px 0 72px; }
+
+    .hero {
+      margin-bottom: 28px;
+      padding: clamp(28px, 5vw, 52px);
+      border-radius: 24px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), #24528f 64%, var(--accent));
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.86;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 3.35rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p:last-child {
+      max-width: 680px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .updated {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 6px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 0.88rem;
+    }
+
+    .card {
+      margin-top: 24px;
+      padding: clamp(24px, 5vw, 44px);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .summary {
+      border-left: 5px solid var(--accent);
+    }
+
+    h2 {
+      margin: 2.2em 0 0.6em;
+      color: var(--primary);
+      font-size: 1.45rem;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    h2:first-child { margin-top: 0; }
+
+    h3 {
+      margin: 1.5em 0 0.4em;
+      font-size: 1.08rem;
+    }
+
+    p, ul { margin-top: 0.55em; }
+
+    ul { padding-left: 1.3em; }
+
+    li + li { margin-top: 0.42em; }
+
+    .toc {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 28px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .toc a {
+      display: block;
+      padding: 7px 0;
+      text-decoration: none;
+    }
+
+    .contact-box {
+      margin-top: 18px;
+      padding: 20px;
+      border: 1px solid #b9ddd3;
+      border-radius: 14px;
+      background: #effaf7;
+    }
+
+    .contact-box p:last-child { margin-bottom: 0; }
+
+    .legal-note {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    footer {
+      padding: 30px 16px 44px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      main { padding-top: 28px; }
+      .toc { grid-template-columns: 1fr; gap: 2px; }
+      .topbar__inner { min-height: 60px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="https://www.consultoriaeduca.com.br/">Consultoria Educa</a>
+      <a class="home-link" href="https://www.consultoriaeduca.com.br/">Voltar ao site</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="titulo-politica">
+      <p class="eyebrow">Privacidade e proteção de dados</p>
+      <h1 id="titulo-politica">Política de Privacidade</h1>
+      <p>Este documento explica, de forma clara, como tratamos os dados pessoais de quem acessa o site, preenche nossos formulários ou conversa conosco por WhatsApp e outros canais.</p>
+      <span class="updated">Última atualização: 15 de setembro de 2026</span>
+    </section>
+
+    <section class="card summary" aria-labelledby="resumo">
+      <h2 id="resumo">Resumo</h2>
+      <p>A Consultoria Educa usa os dados necessários para atender solicitações, orientar interessados sobre cursos e apoiar etapas de inscrição ou pré-matrícula. Quando necessário para atender ao pedido do titular, os dados podem ser encaminhados à instituição de ensino ou a fornecedores que viabilizam o atendimento. Não comercializamos dados pessoais.</p>
+    </section>
+
+    <nav class="card" aria-label="Índice da Política de Privacidade">
+      <h2>Índice</h2>
+      <ul class="toc">
+        <li><a href="#controlador">1. Quem trata os dados</a></li>
+        <li><a href="#dados">2. Dados tratados</a></li>
+        <li><a href="#finalidades">3. Finalidades e bases legais</a></li>
+        <li><a href="#whatsapp">4. WhatsApp e comunicações</a></li>
+        <li><a href="#compartilhamento">5. Compartilhamento</a></li>
+        <li><a href="#cookies">6. Cookies e dados técnicos</a></li>
+        <li><a href="#transferencias">7. Transferências internacionais</a></li>
+        <li><a href="#retencao">8. Retenção e eliminação</a></li>
+        <li><a href="#seguranca">9. Segurança</a></li>
+        <li><a href="#direitos">10. Direitos do titular</a></li>
+        <li><a href="#menores">11. Crianças e adolescentes</a></li>
+        <li><a href="#alteracoes">12. Alterações desta política</a></li>
+        <li><a href="#contato">13. Contato</a></li>
+      </ul>
+    </nav>
+
+    <article class="card">
+      <section id="controlador">
+        <h2>1. Quem é o controlador dos dados</h2>
+        <p>O controlador dos dados pessoais tratados no contexto deste site e dos atendimentos da Consultoria Educa é <strong>56 165 096 RIAN FERREIRA DE OLIVEIRA</strong>, inscrito no CNPJ sob o nº <strong>56.165.096/0001-00</strong>, com atuação em Juiz de Fora, Minas Gerais, doravante denominado “Consultoria Educa”.</p>
+        <p>As decisões sobre como e por que os dados são utilizados são tomadas pela Consultoria Educa, observadas a Lei nº 13.709/2018 — Lei Geral de Proteção de Dados Pessoais (“LGPD”) — e as demais normas aplicáveis.</p>
+      </section>
+
+      <section id="dados">
+        <h2>2. Quais dados pessoais podemos tratar</h2>
+        <p>Conforme a forma de contato e o serviço solicitado, podemos tratar:</p>
+        <ul>
+          <li><strong>Dados de identificação e contato:</strong> nome completo, telefone, número de WhatsApp e e-mail.</li>
+          <li><strong>Dados relacionados ao interesse educacional:</strong> curso, modalidade, unidade, cidade, disponibilidade, preferências e outras informações necessárias para orientação, inscrição ou pré-matrícula.</li>
+          <li><strong>Dados de atendimento:</strong> conteúdo das mensagens, solicitações, respostas, escolhas feitas em botões ou formulários e histórico de contato.</li>
+          <li><strong>Dados técnicos:</strong> endereço IP, tipo de dispositivo e navegador, páginas acessadas, datas e horários, identificadores de cookies e registros de segurança.</li>
+          <li><strong>Dados fornecidos por parceiros:</strong> informações de interessados encaminhadas por instituições ou plataformas parceiras, quando esse compartilhamento possuir base legal e tiver sido informado ao titular.</li>
+        </ul>
+        <p>Não solicitamos dados pessoais sensíveis por meio do formulário inicial. Pedimos que o usuário não envie informações sensíveis sem necessidade e sem orientação específica.</p>
+      </section>
+
+      <section id="finalidades">
+        <h2>3. Para que usamos os dados e quais são as bases legais</h2>
+        <p>Os dados podem ser utilizados para:</p>
+        <ul>
+          <li>responder dúvidas e solicitações feitas pelo usuário;</li>
+          <li>prestar orientação sobre cursos, bolsas, modalidades, unidades e condições disponíveis;</li>
+          <li>realizar, a pedido do interessado, procedimentos preliminares de inscrição ou pré-matrícula;</li>
+          <li>encaminhar os dados necessários à instituição de ensino escolhida ou pertinente ao pedido;</li>
+          <li>manter contato por WhatsApp, telefone ou e-mail durante o atendimento;</li>
+          <li>enviar comunicações promocionais quando houver consentimento ou outra base legal aplicável, sempre com meio simples de oposição ou cancelamento;</li>
+          <li>prevenir fraudes, abusos e incidentes de segurança;</li>
+          <li>cumprir obrigações legais, regulatórias e determinações de autoridades; e</li>
+          <li>exercer ou defender direitos em processos administrativos, judiciais ou extrajudiciais.</li>
+        </ul>
+        <p>Conforme a situação, o tratamento poderá se apoiar no consentimento do titular, na execução de contrato ou de procedimentos preliminares solicitados por ele, no cumprimento de obrigação legal ou regulatória, no exercício regular de direitos ou no legítimo interesse, sempre com avaliação dos direitos e das expectativas do titular.</p>
+      </section>
+
+      <section id="whatsapp">
+        <h2>4. WhatsApp e outras comunicações</h2>
+        <p>Quando o usuário inicia um atendimento ou informa seu número, a Consultoria Educa pode usar o WhatsApp para responder, acompanhar o pedido e enviar informações relacionadas ao serviço solicitado. A comunicação pode ser realizada por atendentes ou por recursos automatizados, como mensagens previamente aprovadas e respostas acionadas por botões.</p>
+        <p>Mensagens promocionais somente devem ser enviadas quando houver uma base legal adequada. O usuário pode solicitar o encerramento dessas mensagens a qualquer momento, inclusive respondendo “PARAR” ou utilizando a opção de cancelamento disponibilizada na conversa. A solicitação não impede comunicações estritamente necessárias para concluir um pedido em andamento ou cumprir obrigação legal.</p>
+        <p>O uso do WhatsApp também está sujeito às políticas de privacidade e aos termos da Meta e do WhatsApp. A Consultoria Educa não solicita senhas, códigos de verificação ou credenciais por mensagem.</p>
+      </section>
+
+      <section id="compartilhamento">
+        <h2>5. Com quem os dados podem ser compartilhados</h2>
+        <p>Os dados podem ser compartilhados, no limite necessário para cada finalidade, com:</p>
+        <ul>
+          <li><strong>instituições de ensino e parceiros educacionais</strong>, quando necessário para atender à solicitação, verificar condições ou realizar inscrição ou pré-matrícula;</li>
+          <li><strong>fornecedores de tecnologia</strong>, como hospedagem, formulários, armazenamento, segurança, atendimento, e-mail e mensageria;</li>
+          <li><strong>Meta e WhatsApp</strong>, para viabilizar comunicações realizadas por esses serviços;</li>
+          <li><strong>prestadores profissionais</strong>, como suporte técnico, contábil ou jurídico, sujeitos a deveres de confidencialidade; e</li>
+          <li><strong>autoridades públicas</strong>, quando houver obrigação legal, ordem válida ou necessidade de proteção de direitos.</li>
+        </ul>
+        <p>A Consultoria Educa não vende nem aluga dados pessoais. Sempre que possível, exige-se dos fornecedores o tratamento seguro, confidencial e limitado às instruções e finalidades contratadas.</p>
+      </section>
+
+      <section id="cookies">
+        <h2>6. Cookies e dados técnicos</h2>
+        <p>Cookies são pequenos arquivos armazenados no dispositivo durante a navegação. O site pode utilizar:</p>
+        <ul>
+          <li><strong>cookies necessários</strong>, indispensáveis ao funcionamento, à segurança e à manutenção das preferências do usuário;</li>
+          <li><strong>cookies de medição</strong>, para compreender o uso das páginas e melhorar o desempenho; e</li>
+          <li><strong>cookies de publicidade</strong>, caso sejam habilitados, para medir campanhas e apresentar comunicações mais relevantes.</li>
+        </ul>
+        <p>Cookies não necessários devem ser utilizados conforme as escolhas apresentadas ao usuário. Também é possível restringir ou apagar cookies nas configurações do navegador, embora isso possa afetar algumas funções do site.</p>
+      </section>
+
+      <section id="transferencias">
+        <h2>7. Transferências internacionais</h2>
+        <p>Alguns fornecedores de tecnologia e comunicação podem armazenar ou processar dados em outros países. Quando houver transferência internacional, serão adotadas as medidas previstas na LGPD e na regulamentação aplicável, incluindo a escolha de fornecedores com salvaguardas adequadas e a limitação do tratamento ao necessário.</p>
+      </section>
+
+      <section id="retencao">
+        <h2>8. Por quanto tempo mantemos os dados</h2>
+        <p>Os dados são conservados pelo tempo necessário para cumprir as finalidades descritas nesta política, atender ao pedido do titular e manter registros legítimos do atendimento. Após o término do tratamento, os dados serão eliminados ou anonimizados, salvo quando sua conservação for permitida ou exigida por lei, necessária ao exercício de direitos ou destinada a outra finalidade legítima prevista na LGPD.</p>
+      </section>
+
+      <section id="seguranca">
+        <h2>9. Como protegemos os dados</h2>
+        <p>São adotadas medidas técnicas e administrativas compatíveis com o porte e os riscos da atividade para proteger os dados contra acesso não autorizado, perda, alteração, divulgação ou tratamento inadequado. Nenhum ambiente é totalmente imune a incidentes; por isso, procedimentos de prevenção, controle de acesso e resposta são revistos quando necessário.</p>
+      </section>
+
+      <section id="direitos">
+        <h2>10. Direitos do titular</h2>
+        <p>Nos termos da LGPD, o titular pode solicitar, conforme aplicável:</p>
+        <ul>
+          <li>confirmação da existência de tratamento e acesso aos dados;</li>
+          <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+          <li>anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade;</li>
+          <li>portabilidade, observadas a regulamentação e a proteção de segredos comercial e industrial;</li>
+          <li>informação sobre entidades públicas e privadas com as quais os dados foram compartilhados;</li>
+          <li>informação sobre a possibilidade de negar ou revogar o consentimento e as consequências dessa decisão;</li>
+          <li>eliminação dos dados tratados com consentimento, ressalvadas as hipóteses legais de conservação;</li>
+          <li>oposição a tratamento irregular realizado sem consentimento; e</li>
+          <li>revisão de decisão tomada exclusivamente por tratamento automatizado que afete seus interesses, quando aplicável.</li>
+        </ul>
+        <p>Para proteger o próprio titular, poderemos solicitar informações razoáveis para confirmar a identidade antes de atender ao pedido. O exercício dos direitos é gratuito, ressalvadas as limitações previstas em lei.</p>
+      </section>
+
+      <section id="menores">
+        <h2>11. Crianças e adolescentes</h2>
+        <p>Os serviços são destinados principalmente a pessoas interessadas em educação superior. Não buscamos coletar intencionalmente dados de crianças. Quando o interessado for menor de idade, a participação do responsável legal será solicitada sempre que necessária, e o tratamento deverá observar o melhor interesse do menor e as exigências específicas da legislação.</p>
+      </section>
+
+      <section id="alteracoes">
+        <h2>12. Alterações desta política</h2>
+        <p>Esta política pode ser atualizada para refletir mudanças no site, nos serviços, nos fornecedores ou na legislação. A versão vigente será publicada nesta página com a data da última atualização. Alterações relevantes serão destacadas quando necessário.</p>
+      </section>
+
+      <section id="contato">
+        <h2>13. Como falar sobre privacidade</h2>
+        <p>Pedidos, dúvidas ou reclamações sobre dados pessoais podem ser encaminhados ao canal abaixo. Para agilizar a análise, informe que o assunto é “Privacidade/LGPD” e descreva a solicitação.</p>
+        <div class="contact-box">
+          <p><strong>Controlador:</strong> 56 165 096 RIAN FERREIRA DE OLIVEIRA</p>
+          <p><strong>CNPJ:</strong> 56.165.096/0001-00</p>
+          <p><strong>Canal de privacidade:</strong> <a href="https://wa.me/5532987004926">WhatsApp (32) 98700-4926</a></p>
+        </div>
+        <p>Se o pedido não for resolvido, o titular também pode peticionar perante a Agência Nacional de Proteção de Dados (ANPD) ou recorrer aos órgãos de defesa do consumidor, nos termos da legislação.</p>
+      </section>
+
+      <section aria-labelledby="referencias-legais">
+        <h2 id="referencias-legais">Referências legais</h2>
+        <p class="legal-note">Esta política foi estruturada com base na Lei nº 13.709/2018 (LGPD) e nas orientações publicadas pela Agência Nacional de Proteção de Dados. O documento deve refletir as práticas reais da operação e não substitui avaliação jurídica individualizada.</p>
+        <ul class="legal-note">
+          <li><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm">Lei Geral de Proteção de Dados Pessoais — LGPD</a></li>
+          <li><a href="https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia-orientativo-cookies-e-protecao-de-dados-pessoais.pdf">Guia Orientativo sobre Cookies e Proteção de Dados Pessoais — ANPD</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    © 2026 Consultoria Educa. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

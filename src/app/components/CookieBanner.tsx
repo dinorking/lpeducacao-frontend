@@ -36,7 +36,7 @@ export function CookieBanner() {
               </h3>
               <p className="text-sm text-gray-700">
                 Utilizamos cookies para melhorar sua experiência e proteger seus dados conforme a LGPD.{' '}
-                <a href="#" className="text-[#0055A5] hover:underline">
+                <a href="/politica-de-privacidade" className="text-[#0055A5] hover:underline">
                   Política de Privacidade
                 </a>
               </p>
